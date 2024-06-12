@@ -5,3 +5,5 @@ This simple program demonstrates my experience with HTML, CSS, and JavaScript. I
 ![App Platorm](screenshot/ss000001.png)
 
 Стартуй!
+
+[DRMO RUN](https://blackbirdcoder.github.io/cat-and-mouse/src/index.html "demo")
