@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo. Cat and Mouse</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body class="page">
+        <div class="main">
+            <div class="monitor-game">
+                <div class="playing-field">
+                    <div class="screen-decoration"></div>
+                    <div id="scene" class="scene"></div>
+                </div>
+            </div>
+            <div class="notification-panel">
+                <div class="timer-box">
+                    <span class="text text-timer"
+                        >Таймер:<span class="text-timer-output" id="textTimerNotification">0</span>
+                    </span>
+                    <div class="timer-blank">
+                        <div id="timerSegment" class="segment"></div>
+                    </div>
+                </div>
+                <div class="control-panel">
+                    <button class="button" id="startButton">Старт</button>
+                </div>
+                <div class="title-box">
+                    <span class="title">мыщъх-404</span>
+                </div>
+                <div class="points-box">
+                    <div class="points-picture">&#128001;</div>
+                    <div class="points">
+                        <span class="points-text">x</span>
+                        <span class="points-text" id="pointsCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result" class="result-box">
+            <span class="result-text">Ваш улов:</span><span class="result-picture"></span>
+        </div>
+        <script src="javascript/main.js"></script>
+    </body>
+</html>

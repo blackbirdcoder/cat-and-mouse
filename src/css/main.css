@@ -1,0 +1,267 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --swatch-1: #8f363c;
+    --swatch-2: #eae3cf;
+    --swatch-3: #b5de89;
+    --swatch-4: #6aab7c;
+    --swatch-5: #3e3a31;
+    --swatch-6: #a2dceb;
+    --swatch-7: #759ed0;
+    --swatch-8: #434ea8;
+    --swatch-9: #dfe0db4f;
+    --swatch-10: #9bbc0f52;
+    --swatch-11: #9bbc0f21;
+    --swatch-12: #9bbc0f45;
+    --swatch-13: #9bbc0f3b;
+    --swatch-14: #8b877c;
+    --swatch-15: #211e17;
+    --swatch-16: #102f3b;
+    --swatch-17: #7d887d;
+    --swatch-18: #b4c7b4;
+    --swatch-19: #a16b49;
+    --swatch-20: #2e2b24;
+    --swatch-21: #15120b;
+    --swatch-22: #764b30;
+    --swatch-23: #000000;
+    --swatch-24: #251912;
+}
+
+.page {
+    padding: 0;
+    width: 1000px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--swatch-16);
+}
+
+.heading {
+    padding-bottom: 20px;
+    margin: 0;
+    font-size: 45px;
+    text-align: center;
+    color: var(--swatch-2);
+}
+
+.main {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 950px;
+    background-color: var(--swatch-5);
+    border: 10px solid var(--swatch-22);
+    box-shadow: -9px -11px 0px 20px var(--swatch-24);
+    overflow: hidden;
+}
+
+.playing-field {
+    width: 600px;
+    height: 500px;
+    background-color: var(--swatch-14);
+    border: 15px solid var(--swatch-15);
+    border-radius: 7%;
+    position: relative;
+    box-shadow: 0px 3px 4px var(--swatch-23);
+    overflow: hidden;
+}
+
+.screen-decoration {
+    background-color: var(--swatch-10);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    background: radial-gradient(circle, var(--swatch-11) 0%, var(--swatch-12) 50%, var(--swatch-13) 100%);
+    filter: brightness(0.8);
+    box-shadow: inset 2px -4px 20px 7px var(--swatch-9);
+}
+
+.scene {
+    width: 550px;
+    height: 450px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.cell {
+    margin-top: 0px;
+    margin-right: 3px;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    width: 50px;
+    height: 50px;
+    outline: 1px solid transparent;
+    display: inline-block;
+    position: relative;
+}
+
+.monitor-game {
+    margin: 20px;
+    background: var(--swatch-20);
+    outline: 15px solid var(--swatch-20);
+    border-radius: 1px;
+}
+
+/* Points */
+
+.points-box {
+    display: flex;
+}
+
+.points-text {
+    color: var(--swatch-2);
+}
+
+.result-picture,
+.points-picture,
+.points-text {
+    font-size: 40px;
+}
+
+/* ------ */
+
+.button {
+    font-size: 30px;
+    cursor: pointer;
+    width: 150px;
+    height: 80px;
+    background-color: var(--swatch-21);
+    color: var(--swatch-2);
+    border-color: var(--swatch-2);
+}
+
+.button:hover {
+    background-color: var(--swatch-1);
+}
+
+.button:disabled {
+    background-color: var(--swatch-1);
+    border-color: var(--swatch-17);
+    color: var(--swatch-18);
+    cursor: default;
+}
+
+.notification-panel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 523px;
+    justify-content: space-between;
+    background-color: var(--swatch-20);
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Timer */
+
+.timer-box {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.timer-blank {
+    width: 120px;
+    height: 120px;
+    background-color: var(--swatch-21);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--swatch-2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.segment {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid transparent;
+    rotate: 45deg;
+    position: absolute;
+    left: -3px;
+    top: -2px;
+}
+
+/* Text */
+
+.text {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 7px;
+    text-align: center;
+    font-size: 25px;
+    color: var(--swatch-2);
+}
+
+.text-timer-output {
+    display: inline-block;
+    width: 40px;
+}
+
+/* Cat and Mouse*/
+
+.hero,
+.food {
+    font-size: 40px;
+    outline: 1px solid transparent;
+    width: 50px;
+    height: 50px;
+    transform: scale(-1, 1);
+    overflow: hidden;
+    position: absolute;
+    filter: grayscale(0.6);
+}
+
+.food {
+    transform: scale(1, 1);
+}
+
+/* Name */
+
+.title-box {
+    width: 100%;
+}
+
+.title {
+    color: var(--swatch-20);
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--swatch-2);
+    font-weight: 300;
+    width: 100%;
+    padding: 5px;
+    font-style: italic;
+    border: 2px solid var(--swatch-14);
+}
+
+/* Result */
+
+.result-box {
+    display: none;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+.result-text {
+    color: var(--swatch-2);
+    font-size: 40px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
