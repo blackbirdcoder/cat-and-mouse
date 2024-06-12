@@ -310,8 +310,7 @@ function Manager(button, timer, scene, hero, foods, board, statistics, failure) 
     this.failure = failure;
 
     this.positioning = function (cells, worker) {
-        // WARN: Be careful, slippery place!
-        const index = Math.floor(Math.random() * (cells.length + 1 - 0) + 0);
+        const index = Math.floor(Math.random() * (cells.length - 0) + 0);
         try {
             if (!cells[index].dataset.busy) {
                 cells[index].dataset.busy = worker.actor.classList.value;
@@ -321,8 +320,7 @@ function Manager(button, timer, scene, hero, foods, board, statistics, failure) 
                 this.positioning(cells, worker);
             }
         } catch (error) {
-            console.warn(error, cells);
-            console.warn(cells[index]);
+            console.warn(error);
             this.positioning(cells, worker);
         }
     };
@@ -357,7 +355,7 @@ function Manager(button, timer, scene, hero, foods, board, statistics, failure) 
                 return;
             }
         }
-        
+
         setTimeout(() => {
             this.process(
                 delay,
