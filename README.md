@@ -8,4 +8,4 @@ This simple program demonstrates my experience with HTML, CSS, and JavaScript. I
 
 Стартуй!
 
-[DRMO RUN](https://blackbirdcoder.github.io/cat-and-mouse/src/index.html "demo")
+[DEMO RUN](https://blackbirdcoder.github.io/cat-and-mouse/src/index.html "demo")
